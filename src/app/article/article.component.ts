@@ -1,4 +1,5 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Article } from './article.model';
 
 @Component({
   selector: 'app-article',
@@ -7,25 +8,20 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row'; // This adds an attribute to the enterer app-article tag.
-  votes: number;
-  title: string;
-  link: string;
+  @Input() article: Article;
 
   constructor() {
-    this.title = 'Angular 2';
-    this.link = 'http://angular.io';
-    this.votes = 10;
-   }
+  }
 
-   voteUp(): boolean {
-     this.votes += 1;
-     return false; // JavaScript, by default, propagates the click event to all the parent components.
-   }
+  voteUp(): boolean {
+    this.article.voteUp();
+    return false; // JavaScript, by default, propagates the click event to all the parent components.
+  }
 
-   voteDown(): boolean {
-     this.votes -= 1;
-     return false; // To fix that, we need to make the click event handler to return false.
-   }
+  voteDown(): boolean {
+    this.article.voteDown();
+    return false; // To fix that, we need to make the click event handler to return false.
+  }
 
   ngOnInit() {
   }
