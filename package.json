@@ -1,6 +1,9 @@
 {
   "name": "simple-angular-reddit-clone",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Simple reddit clone with angular",
+  "author": "Victor Contreras",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
