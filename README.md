@@ -1,8 +1,10 @@
 # SimpleAngularRedditClone
 
-## Project preview
+## Project view
 
-You can find it working at: https://simple-angular-reddit-clone-ytdamewllb.now.sh/
+You can see how it works at: https://simple-angular-reddit-clone-ytdamewllb.now.sh/
+
+![Project](./project-image/home_page.png)
 
 ## Development server
 
